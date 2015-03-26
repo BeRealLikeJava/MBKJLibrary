@@ -10,5 +10,5 @@ package models;
  * @author Kris
  */
 abstract public class Osoba {
-    
+    private int id;
 }
