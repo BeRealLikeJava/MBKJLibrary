@@ -10,5 +10,6 @@ package models;
  * @author mateusz
  */
 public class Book {
+    private String author;
     private String id;
 }
