@@ -11,5 +11,5 @@ package models;
  */
 abstract public class Osoba {
     private int id;
-    private String name;
+    private String surname;
 }
