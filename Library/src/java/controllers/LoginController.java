@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import models.Person;
 import models.Visitor;
+import utils.DBConnection;
 
 /**
  *
@@ -51,6 +52,15 @@ public class LoginController extends HttpServlet {
             
             request.setAttribute("loggedUser", visitor);
             request.getRequestDispatcher("main.jsp").forward(request, response);
+            
+            try{
+                DBConnection conn = new DBConnection();
+                conn.getMySQLConnection();
+            }catch(Exception e)
+            {
+                e.printStackTrace();
+                System.out.println(e.getMessage());
+            }
             
         }else{
             

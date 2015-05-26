@@ -5,7 +5,7 @@
  */
 package utils;
 
-import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -19,7 +19,7 @@ public class DBConnection {
     
     public Connection getMySQLConnection() throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException
     {
-        Class.forName("com.mysql.jdbc.Driver").newInstance();
+        Class.forName("org.gjt.mm.mysql.Driver").newInstance();
         this.con = (Connection) DriverManager.getConnection("jdbc:mysql://jbossas-mkjavalibrary.rhcloud.com", "Testowy", "Test123");
         
         return this.con;
